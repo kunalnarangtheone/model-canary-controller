@@ -1,0 +1,15 @@
+version: v2
+modules:
+  - path: common/proto
+  - path: services/controller/proto
+  - path: services/worker/proto
+lint:
+  use:
+    - STANDARD
+  except:
+    - RPC_REQUEST_RESPONSE_UNIQUE # InferRequest/InferResponse intentionally shared across services
+    - PACKAGE_VERSION_SUFFIX      # no versioning in package names for this internal tool
+    - PACKAGE_DIRECTORY_MATCH     # controller/worker proto at module root, not in a package-named subdir
+breaking:
+  use:
+    - FILE

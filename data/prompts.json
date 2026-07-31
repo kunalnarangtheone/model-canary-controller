@@ -1,0 +1,306 @@
+{
+  "version": "1.0",
+  "description": "Fixed synthetic prompt set for canary controller experiments. Three sub-types: factual (anchors control run), reasoning (stresses quantization regression), instruction (stresses prompt regression).",
+  "prompts": [
+    {
+      "id": "f001",
+      "type": "factual",
+      "text": "What is the capital of France?"
+    },
+    {
+      "id": "f002",
+      "type": "factual",
+      "text": "What is the chemical symbol for water?"
+    },
+    {
+      "id": "f003",
+      "type": "factual",
+      "text": "How many days are in a leap year?"
+    },
+    {
+      "id": "f004",
+      "type": "factual",
+      "text": "What planet is closest to the Sun?"
+    },
+    {
+      "id": "f005",
+      "type": "factual",
+      "text": "What is the boiling point of water in Celsius?"
+    },
+    {
+      "id": "f006",
+      "type": "factual",
+      "text": "Who wrote Romeo and Juliet?"
+    },
+    {
+      "id": "f007",
+      "type": "factual",
+      "text": "How many sides does a hexagon have?"
+    },
+    {
+      "id": "f008",
+      "type": "factual",
+      "text": "What is the speed of light in a vacuum, approximately?"
+    },
+    {
+      "id": "f009",
+      "type": "factual",
+      "text": "What is the largest ocean on Earth?"
+    },
+    {
+      "id": "f010",
+      "type": "factual",
+      "text": "What gas do plants absorb during photosynthesis?"
+    },
+    {
+      "id": "f011",
+      "type": "factual",
+      "text": "In what year did the First World War end?"
+    },
+    {
+      "id": "f012",
+      "type": "factual",
+      "text": "What is the hardest natural substance on Earth?"
+    },
+    {
+      "id": "f013",
+      "type": "factual",
+      "text": "How many bones are in the adult human body?"
+    },
+    {
+      "id": "f014",
+      "type": "factual",
+      "text": "What is the currency of Japan?"
+    },
+    {
+      "id": "f015",
+      "type": "factual",
+      "text": "What is the smallest prime number?"
+    },
+    {
+      "id": "f016",
+      "type": "factual",
+      "text": "Which element has the atomic number 1?"
+    },
+    {
+      "id": "f017",
+      "type": "factual",
+      "text": "What is the longest river in the world?"
+    },
+    {
+      "id": "f018",
+      "type": "factual",
+      "text": "How many chambers does the human heart have?"
+    },
+    {
+      "id": "f019",
+      "type": "factual",
+      "text": "What is the square root of 144?"
+    },
+    {
+      "id": "f020",
+      "type": "factual",
+      "text": "What language is primarily spoken in Brazil?"
+    },
+    {
+      "id": "r001",
+      "type": "reasoning",
+      "text": "A train leaves Station A at 9:00 AM travelling at 60 km/h. Another train leaves Station B, 300 km away, at 10:00 AM travelling toward Station A at 90 km/h. At what time do they meet?"
+    },
+    {
+      "id": "r002",
+      "type": "reasoning",
+      "text": "Alice has twice as many apples as Bob. Bob has 5 more apples than Carol. Carol has 3 apples. How many apples does Alice have?"
+    },
+    {
+      "id": "r003",
+      "type": "reasoning",
+      "text": "A shop sells pens at $1.20 each and notebooks at $3.50 each. If someone spends exactly $20.00 buying only pens and notebooks, how many of each did they buy?"
+    },
+    {
+      "id": "r004",
+      "type": "reasoning",
+      "text": "A rectangle has a perimeter of 48 cm. Its length is three times its width. What is the area of the rectangle?"
+    },
+    {
+      "id": "r005",
+      "type": "reasoning",
+      "text": "If you fold a piece of paper in half 10 times, how many layers thick is it? Show your reasoning."
+    },
+    {
+      "id": "r006",
+      "type": "reasoning",
+      "text": "A tank fills completely in 6 hours with pipe A open and 9 hours with pipe B open. How long does it take to fill the tank with both pipes open simultaneously?"
+    },
+    {
+      "id": "r007",
+      "type": "reasoning",
+      "text": "There are 23 people in a room. Every person shakes hands exactly once with every other person. How many handshakes occur in total?"
+    },
+    {
+      "id": "r008",
+      "type": "reasoning",
+      "text": "A car travels the first half of a journey at 40 km/h and the second half at 60 km/h. What is the average speed for the entire journey?"
+    },
+    {
+      "id": "r009",
+      "type": "reasoning",
+      "text": "In a class of 30 students, 18 study French, 15 study Spanish, and 7 study both. How many students study neither language?"
+    },
+    {
+      "id": "r010",
+      "type": "reasoning",
+      "text": "A ladder 10 metres long leans against a wall. The base of the ladder is 6 metres from the wall. How high up the wall does the ladder reach?"
+    },
+    {
+      "id": "r011",
+      "type": "reasoning",
+      "text": "If the pattern continues: 2, 6, 12, 20, 30 — what is the next number? Explain your reasoning."
+    },
+    {
+      "id": "r012",
+      "type": "reasoning",
+      "text": "A box contains 4 red balls and 6 blue balls. You draw two balls at random without replacement. What is the probability both are red?"
+    },
+    {
+      "id": "r013",
+      "type": "reasoning",
+      "text": "Three friends split a restaurant bill. The total is $87. They leave a 15% tip and split everything equally. How much does each person pay?"
+    },
+    {
+      "id": "r014",
+      "type": "reasoning",
+      "text": "A snail climbs 3 metres up a pole during the day but slides back 1 metre each night. The pole is 10 metres tall. On which day does the snail reach the top?"
+    },
+    {
+      "id": "r015",
+      "type": "reasoning",
+      "text": "You invest $1,000 at 5% annual interest compounded annually. How much do you have after 3 years? Show your working."
+    },
+    {
+      "id": "r016",
+      "type": "reasoning",
+      "text": "A sequence starts: 1, 1, 2, 3, 5, 8. What is the sum of the next three terms?"
+    },
+    {
+      "id": "r017",
+      "type": "reasoning",
+      "text": "A factory produces 240 widgets per hour with 6 machines. How long will it take 9 machines to produce 540 widgets, assuming the same rate per machine?"
+    },
+    {
+      "id": "r018",
+      "type": "reasoning",
+      "text": "Two dice are rolled. What is the probability the sum is greater than 9?"
+    },
+    {
+      "id": "r019",
+      "type": "reasoning",
+      "text": "A square has the same area as a circle with radius 5. What is the side length of the square? Give your answer to two decimal places."
+    },
+    {
+      "id": "r020",
+      "type": "reasoning",
+      "text": "If I double a number and subtract 7, I get 33. If I triple the original number and add 4, what do I get?"
+    },
+    {
+      "id": "i001",
+      "type": "instruction",
+      "text": "List exactly three fruits. Respond in a single sentence containing only those three fruits, separated by commas."
+    },
+    {
+      "id": "i002",
+      "type": "instruction",
+      "text": "Describe what a computer does. Your response must be exactly two sentences long."
+    },
+    {
+      "id": "i003",
+      "type": "instruction",
+      "text": "Name the four seasons. Use a numbered list and include no other text."
+    },
+    {
+      "id": "i004",
+      "type": "instruction",
+      "text": "Write a one-sentence definition of gravity. Do not use the word 'force'."
+    },
+    {
+      "id": "i005",
+      "type": "instruction",
+      "text": "List three countries in Europe, one per line, in alphabetical order. Include nothing else."
+    },
+    {
+      "id": "i006",
+      "type": "instruction",
+      "text": "Explain what a library is in exactly 20 words. Count carefully."
+    },
+    {
+      "id": "i007",
+      "type": "instruction",
+      "text": "Name two primary colours. Format your response as a JSON array of strings."
+    },
+    {
+      "id": "i008",
+      "type": "instruction",
+      "text": "Write a two-word phrase that means 'happy' and another that means 'sad'. Respond with just the two phrases, one per line."
+    },
+    {
+      "id": "i009",
+      "type": "instruction",
+      "text": "Summarise what the internet is in no more than 15 words."
+    },
+    {
+      "id": "i010",
+      "type": "instruction",
+      "text": "List the first five even numbers. Respond as a comma-separated sequence on a single line with no spaces."
+    },
+    {
+      "id": "i011",
+      "type": "instruction",
+      "text": "Describe a dog in exactly three adjectives, separated by commas, with no other text."
+    },
+    {
+      "id": "i012",
+      "type": "instruction",
+      "text": "Give one example of a vegetable and one example of a mineral. Format your answer as: Vegetable: X / Mineral: Y."
+    },
+    {
+      "id": "i013",
+      "type": "instruction",
+      "text": "Write the days of the working week in reverse order, one per line."
+    },
+    {
+      "id": "i014",
+      "type": "instruction",
+      "text": "State one advantage and one disadvantage of electric cars. Use bullet points. Each point must be one sentence."
+    },
+    {
+      "id": "i015",
+      "type": "instruction",
+      "text": "Translate the word 'hello' into three different languages. Present each translation on its own line in the format: Language: translation."
+    },
+    {
+      "id": "i016",
+      "type": "instruction",
+      "text": "Write a haiku about rain. A haiku has three lines: 5 syllables, 7 syllables, 5 syllables."
+    },
+    {
+      "id": "i017",
+      "type": "instruction",
+      "text": "Name three programming languages, sorted alphabetically. Respond with a numbered list and no additional commentary."
+    },
+    {
+      "id": "i018",
+      "type": "instruction",
+      "text": "Explain what a password is using only words a 6-year-old would understand. Maximum 25 words."
+    },
+    {
+      "id": "i019",
+      "type": "instruction",
+      "text": "Give two facts about the Moon. Each fact must be exactly one sentence. Number each fact."
+    },
+    {
+      "id": "i020",
+      "type": "instruction",
+      "text": "Write the alphabet in reverse order on a single line with letters separated by hyphens."
+    }
+  ]
+}

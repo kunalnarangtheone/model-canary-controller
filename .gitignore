@@ -1,0 +1,6 @@
+services/*/bin
+.claude/
+.venv/
+services/controller/generated/
+services/worker/generated/
+**/proto/generated/

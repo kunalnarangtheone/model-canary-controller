@@ -1,0 +1,45 @@
+version: "2"
+
+linters:
+  enable:
+    # defaults
+    - errcheck
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    # comments / godoc
+    - godot
+    - godox
+    - revive
+    # security
+    - gosec
+
+  settings:
+    godot:
+      scope: declarations  # only doc comments, not inline ones
+      period: true
+
+    godox:
+      keywords:
+        - TODO
+        - FIXME
+        - BUG
+        - HACK
+        - XXX
+        - OPTIMIZE
+
+    revive:
+      rules:
+        - name: exported
+          arguments:
+            - disableStutteringCheck
+
+    gosec:
+      excludes:
+        - G104  # errors unhandled — already covered by errcheck
+
+  exclusions:
+    rules:
+      - path: proto/generated/
+        linters: [revive, godot, godox, gosec]

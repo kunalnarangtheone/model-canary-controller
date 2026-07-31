@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package controller;
+
+import "infer.proto";
+import "types.proto";
+
+option go_package = "github.com/kunal-narang/model-canary-controller/services/controller/proto/generated;controller";
+
+// ControllerService is called by the traffic generator. The generator sends
+// InferRequest with variant unset; the splitter fills it in before forwarding
+// to the appropriate worker.
+service ControllerService {
+  rpc Infer(common.InferRequest) returns (common.InferResponse);
+}
+
+// RolloutStateService lets external tools (CLI, tests) query the current
+// rollout phase without scraping Prometheus. Not in the hot path.
+service RolloutStateService {
+  rpc GetState(GetStateRequest) returns (GetStateResponse);
+}
+
+message GetStateRequest {}
+
+message GetStateResponse {
+  common.RolloutPhase phase            = 1;
+  double              candidate_weight = 2; // current routing fraction, 0.0–1.0
+  int64               incumbent_count  = 3; // samples accumulated this window
+  int64               candidate_count  = 4;
+}

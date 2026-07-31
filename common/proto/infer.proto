@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package common;
+
+import "types.proto";
+
+option go_package = "github.com/kunal-narang/model-canary-controller/common/proto/generated;common";
+
+// InferRequest and InferResponse are shared by both ControllerService and
+// WorkerService. The same envelope flows the full pipeline:
+//   generator → controller (variant unset)
+//   controller → worker    (splitter fills in variant before forwarding)
+//   worker → controller → generator (response echoes variant back)
+
+message InferRequest {
+  string  prompt_id   = 1; // stable ID from prompts.json; correlates with golden set
+  string  prompt_text = 2;
+  Variant variant     = 3; // unset by the generator; filled in by the splitter
+}
+
+message InferResponse {
+  string  prompt_id     = 1;
+  string  response_text = 2;
+  Variant variant       = 3; // echoed so the evaluator never has to track it separately
+
+  // Token counts are a first-class guardrail (cost per request).
+  int32   input_tokens  = 4;
+  int32   output_tokens = 5;
+
+  // Latency measured inside the worker: time from receiving the RPC to
+  // producing the full response.
+  int64   latency_ms    = 6;
+
+  // Fast-path refusal flag set by the worker (prefix heuristic).
+  bool    refused       = 7;
+
+  // Non-empty when the inference engine failed; evaluator treats as dropped sample.
+  string  error         = 8;
+}

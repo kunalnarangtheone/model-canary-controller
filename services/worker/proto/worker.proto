@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package worker;
+
+import "infer.proto";
+
+option go_package = "github.com/kunal-narang/model-canary-controller/services/worker/proto/generated;worker";
+
+// WorkerService is called by the control plane to dispatch a prompt to a
+// model worker. Workers are config-selected: the same server binary handles
+// incumbent and candidate; the variant field in InferRequest tells it which
+// injection fixture to activate. Workers do not know they are in a canary.
+service WorkerService {
+  rpc Infer(common.InferRequest) returns (common.InferResponse);
+}

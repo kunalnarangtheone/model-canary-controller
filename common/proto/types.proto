@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/kunal-narang/model-canary-controller/common/proto/generated;common";
+
+enum Variant {
+  VARIANT_UNSPECIFIED = 0;
+  VARIANT_INCUMBENT   = 1;
+  VARIANT_CANDIDATE_A = 2;
+  VARIANT_CANDIDATE_B = 3;
+  VARIANT_CONTROL     = 4;
+}
+
+enum RolloutPhase {
+  ROLLOUT_PHASE_UNSPECIFIED = 0;
+  ROLLOUT_PHASE_BASELINE    = 1;
+  ROLLOUT_PHASE_CANARY      = 2;
+  ROLLOUT_PHASE_EVALUATE    = 3;
+  ROLLOUT_PHASE_ADVANCE     = 4;
+  ROLLOUT_PHASE_ROLLBACK    = 5;
+  ROLLOUT_PHASE_PROMOTED    = 6;
+}
